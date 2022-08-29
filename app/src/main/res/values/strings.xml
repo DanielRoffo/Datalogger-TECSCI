@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">TECSI - DataLogger</string>
+    <string name="title_active_login">Tecsci - Data Logger</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forget_password">forgot your password?</string>
+    <string name="login">Login</string>
+    <string name="text_signup">Don\'t have an account?</string>
+    <string name="link_signup">Sign up</string>
+    <string name="repeat_password">Confirm password</string>
+    <string name="signup">Sign Up</string>
+    <string name="all">TODO</string>
+    <string name="user_email">userdefault@gmail.com</string>
+    <string name="user_name">User Default</string>
+    <string name="update_profile">Save</string>
+    <string name="delete_account">Delete account</string>
+    <string name="change_password">Change password</string>
+    <string name="title_update_password">Change password</string>
+    <string name="subtitle_update_password">For security reasons to change your password, you must first enter your current password.</string>
+    <string name="title_delete_account">Delete account</string>
+    <string name="subtitle_delete_account">For security reasons to delete your account completely, you must enter your password.</string>
+    <string name="delete">Delete</string>
+    <string name="title_check_email">Email Verification</string>
+    <string name="subtitle_check_email">To complete your registration, please verify your email address and then click continue.</string>
+    <string name="continue_check_email">Continue</string>
+    <string name="title_account_recovery">Account recovery</string>
+    <string name="subtitle_account_recovery">Enter your email address so we can send you an email with the steps to change your password.</string>
+    <string name="recovery_account">Send</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="device_name">Device Name</string>
+    <string name="sensor_name">Add Name</string>
+    <string name="sensor_value">Sensor Value</string>
+    <string name="sensor_type">Sensor Type</string>
+    <string name="first_time_actualization">First Time</string>
+    <string name="last_time_actualization">Last Time</string>
+    <string name="device_id">Device id</string>
+    <string name="day_of_creation">Day of creation</string>
+
+
+    <string-array name="devices">
+        <item>esp32/h/t</item>
+        <item>Hum/Temp/Volt</item>
+        <item>Hum x 3</item>
+    </string-array>
+</resources>

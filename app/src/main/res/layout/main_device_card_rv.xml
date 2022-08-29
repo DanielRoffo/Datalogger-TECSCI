@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    android:backgroundTint="@color/lighter_black"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardInfo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="36"
+            app:cardBackgroundColor="@color/gold"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sensorName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="@string/sensor_name"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="7dp"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/LastSensorValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="26sp"
+                    android:layout_marginTop="5dp"
+                    android:textStyle="bold"
+                    android:text="@string/sensor_value"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/sensorType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="@string/sensor_type"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/lastTimeActualization"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginVertical="5dp"
+                    android:text="@string/last_time_actualization"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/lineChart"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="64"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

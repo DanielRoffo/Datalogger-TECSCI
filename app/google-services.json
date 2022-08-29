@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "627256023244",
+    "firebase_url": "https://tecsci-testapp-default-rtdb.firebaseio.com",
+    "project_id": "tecsci-testapp",
+    "storage_bucket": "tecsci-testapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627256023244:android:b5026a365651e087eeca69",
+        "android_client_info": {
+          "package_name": "com.example.datalogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627256023244-qmm7cs204ltksk965hu5l5kqbqhiapa0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjVT7_T_WDqnc0aJcyjPsBo4ti5qlm_So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627256023244-qmm7cs204ltksk965hu5l5kqbqhiapa0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627256023244:android:52b5a410ec60a943eeca69",
+        "android_client_info": {
+          "package_name": "com.example.datalogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "627256023244-qmm7cs204ltksk965hu5l5kqbqhiapa0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjVT7_T_WDqnc0aJcyjPsBo4ti5qlm_So"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "627256023244-qmm7cs204ltksk965hu5l5kqbqhiapa0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
