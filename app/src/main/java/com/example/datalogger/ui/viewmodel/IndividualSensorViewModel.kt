@@ -10,6 +10,7 @@ import com.example.datalogger.model.SensorData
 import com.example.datalogger.utils.ScreenState
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
 
 class IndividualSensorViewModel() : ViewModel() {
 
@@ -54,10 +55,12 @@ class IndividualSensorViewModel() : ViewModel() {
                                 sensor -> {
                                     sensorData?.sensorVal = it.value.toString()
                                 }
-                                "time" -> {
-                                    val timestamp =
-                                        it.value as com.google.firebase.Timestamp
-                                    val date = timestamp.toDate()
+                                "timestamp" -> {
+
+                                    val formatter  = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                                    val timestamp = it.value.toString()
+                                    val date = formatter.parse(timestamp)
+
                                     sensorData?.time = date
                                 }
                             }

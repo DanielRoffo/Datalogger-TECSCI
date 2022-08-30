@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.view.IndividualSensorDataDisplayActivity"
+    android:background="@color/light_black">
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/viewLoading1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        app:shimmer_auto_start="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/lineChart"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="5"
+            android:orientation="horizontal"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="25dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/value"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="30"
+                android:text="Value"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="45"
+                android:text="Date and Time"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/alarm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="25"
+                android:text="Alarm"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/singleSensorRv"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:layout_weight="60" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/viewLoading2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="60"
+            app:shimmer_auto_start="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+                <include layout="@layout/single_sensor_data_loading"/>
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

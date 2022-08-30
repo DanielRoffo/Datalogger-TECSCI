@@ -1,10 +1,12 @@
 package com.example.datalogger.ui.fragments
 
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.datalogger.adapters.mainFragment.devices.DevicesAdapter
@@ -44,6 +46,7 @@ class MainFragment : Fragment() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -67,6 +70,7 @@ class MainFragment : Fragment() {
     }
 
     //Activa o desactiva las vistas de loading dependiendo del estado de los datos recibidos
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun processDevicesResponse(state: ScreenState<List<UserDevice?>>) {
         when (state) {
             is ScreenState.Loading -> {

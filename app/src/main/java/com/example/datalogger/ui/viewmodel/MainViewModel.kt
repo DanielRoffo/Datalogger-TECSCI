@@ -126,6 +126,7 @@ class MainViewModel() : ViewModel() {
                                             val formatter  = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
                                             val timestamp = it.value.toString()
                                             val date = formatter.parse(timestamp)
+
                                             deviceData?.time = date
                                         }
                                     }

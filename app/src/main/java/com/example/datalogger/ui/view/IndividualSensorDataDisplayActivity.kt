@@ -1,8 +1,10 @@
 package com.example.datalogger.ui.view
 
+import android.content.ContentValues.TAG
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -85,11 +87,13 @@ class IndividualSensorDataDisplayActivity : AppCompatActivity() {
                 }
                 organizedList = state.data?.sortedBy { it?.time }
                 organizedList?.forEachIndexed { index, it ->
-                        //Formateo el tiempo
-                        val timeToString = simpleDateFormated.format(it?.time)
+                    //Formateo el tiempo
 
-                        yvalue.add(Entry(it?.sensorVal.toString().toFloat(), index))
-                        xvalueTime.add(timeToString)
+                    val timestamp = it?.time
+                    var dateToString = simpleDateFormated.format(timestamp)
+
+                    yvalue.add(Entry(it?.sensorVal.toString().toFloat(), index))
+                    xvalueTime.add(dateToString)
 
                 }
                 setLineChartData(xvalueTime, yvalue)
@@ -97,7 +101,6 @@ class IndividualSensorDataDisplayActivity : AppCompatActivity() {
                 binding.viewLoading2.visibility = View.GONE
                 binding.lineChart.visibility = View.VISIBLE
                 binding.singleSensorRv.visibility = View.VISIBLE
-
 
             }
             is ScreenState.Error -> {
