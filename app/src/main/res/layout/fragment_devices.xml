@@ -24,26 +24,6 @@
                     android:orientation="vertical">
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:theme="@style/changeBackgroundColor"
-                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        app:boxBackgroundColor="@color/lighter_black"
-                        app:hintTextColor="@color/white"
-                        android:textColorHint="@color/white"
-                        android:hint="Select Device Model"
-                        android:layout_marginBottom="10dp">
-
-                        <AutoCompleteTextView
-                            android:id="@+id/autocompleteTextView"
-                            android:textColor="@color/white"
-                            android:inputType="none"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" />
-
-                    </com.google.android.material.textfield.TextInputLayout>
-
-                    <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         app:boxBackgroundColor="@color/lighter_black"

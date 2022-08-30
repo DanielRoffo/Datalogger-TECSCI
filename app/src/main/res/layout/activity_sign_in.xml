@@ -10,30 +10,19 @@
         android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="315dp"
-            android:layout_height="185dp"
+            android:layout_width="386dp"
+            android:layout_height="251dp"
+            android:src="@drawable/logo_tecsci"
             tools:ignore="VectorDrawableCompat" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:gravity="center"
-            android:text="@string/title_active_login"
-            android:textSize="27sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,9 +41,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
+            android:textColor="@color/white"
             android:layout_marginRight="24dp"
             android:autofillHints="@string/email"
             android:background="@drawable/ic_field"
+            android:textColorHint="@color/hint_color"
             android:drawableStart="@drawable/ic_email"
             android:drawableLeft="@drawable/ic_email"
             android:drawablePadding="16dp"
@@ -69,8 +60,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
+            android:textColor="@color/white"
             android:layout_marginRight="24dp"
             android:autofillHints="@string/password"
+            android:textColorHint="@color/hint_color"
             android:background="@drawable/ic_field"
             android:drawableStart="@drawable/ic_lock"
             android:drawableLeft="@drawable/ic_lock"
@@ -136,7 +129,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:layout_weight="0"
             android:text="@string/link_signup"
-            android:textColor="#ff9900"
+            android:textColor="#66ccd1"
             android:textSize="24sp" />
     </LinearLayout>
 

@@ -34,13 +34,6 @@ class DevicesFragment : Fragment() {
     private val dbDevicesUsers = Firebase.firestore.collection("users")
     private val myAdapter by lazy { UserDevicesAdapter(emptyList<UserDevice>())}
 
-    override fun onResume() {
-        super.onResume()
-        //Configurando el dropDown menu del formulario
-        val devicesItem = resources.getStringArray(R.array.devices)
-        val arrayAdapter = ArrayAdapter(requireContext(), R.layout.dropdown_item, devicesItem)
-        binding.autocompleteTextView.setAdapter(arrayAdapter)
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -95,11 +88,10 @@ class DevicesFragment : Fragment() {
     private fun addNewDevice(){
         binding.addNewDevice.setOnClickListener {
 
-            val devModel = binding.autocompleteTextView.text.toString()
             val devId = binding.etDeviceId.text.toString()
             val devCode = binding.etDeviceCode.text.toString()
 
-            if (devId.isNotEmpty() && devCode.isNotEmpty() && devModel.isNotEmpty()) {
+            if (devId.isNotEmpty() && devCode.isNotEmpty()) {
 
                 dbDevicesUsers.document(firebaseAuth.currentUser!!.email!!).collection("linked_devices").document(devId)
                     .get().addOnSuccessListener {
@@ -109,12 +101,12 @@ class DevicesFragment : Fragment() {
                                     if (document.data == null){
                                         Toast.makeText(context, "Couldn't find device = $devId", Toast.LENGTH_SHORT).show()
                                     }else{
-                                        if (document.data!!.containsValue(devCode) && document.data!!.containsValue(devModel)){
+                                        if (document.data!!.containsValue(devCode)){
                                             Toast.makeText(context, "Set up your new device!", Toast.LENGTH_SHORT).show()
                                             val intent = Intent(context, AddDeviceActivity::class.java)
-                                            val extras: Bundle = Bundle()
+                                            val extras = Bundle()
                                             extras.putString("device", devId)
-                                            extras.putString("model", devModel)
+                                            extras.putString("model", document.data!!["model"].toString())
                                             intent.putExtra("extras", extras)
                                             startActivity(intent)
                                         }else if (!document.data!!.containsValue(devCode)){

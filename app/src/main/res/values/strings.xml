@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">TECSI - DataLogger</string>
-    <string name="title_active_login">Tecsci - Data Logger</string>
+    <string name="app_name">TECSCI - DataLogger</string>
+    <string name="title_active_signup">Sign Up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forget_password">forgot your password?</string>
@@ -39,10 +39,4 @@
     <string name="device_id">Device id</string>
     <string name="day_of_creation">Day of creation</string>
 
-
-    <string-array name="devices">
-        <item>esp32/h/t</item>
-        <item>Hum/Temp/Volt</item>
-        <item>Hum x 3</item>
-    </string-array>
 </resources>

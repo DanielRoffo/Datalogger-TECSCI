@@ -1,5 +1,6 @@
 package com.example.datalogger.model
 
+import java.time.LocalDate
 import java.util.*
 
 data class DeviceData(

@@ -1,6 +1,7 @@
 package com.example.datalogger.ui.view
 
 import android.content.Intent
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,6 +23,12 @@ class SignUpActivity : AppCompatActivity() {
         binding = ActivitySignUpBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Cambiar el color del SupportActionBar
+        supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.light_black)))
+        supportActionBar!!.title = ""
+        //Agrego un boton de regreso al MainActivity y cambio el titulo del action bar
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+
         getWindow().getDecorView()
             .setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
@@ -29,10 +36,7 @@ class SignUpActivity : AppCompatActivity() {
         val userCollection = db.collection("users")
         firebaseAuth = FirebaseAuth.getInstance()
 
-        binding.backImageView.setOnClickListener {
-            val intent = Intent(this, SignInActivity::class.java)
-            startActivity(intent)
-        }
+
         binding.signUpButton.setOnClickListener {
             val email = binding.emailEditText.text.toString()
             val pass = binding.passwordEditText.text.toString()

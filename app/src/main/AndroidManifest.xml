@@ -19,7 +19,8 @@
             android:parentActivityName=".ui.view.MainActivity" />
         <activity
             android:name=".ui.view.SignUpActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:parentActivityName=".ui.view.SignInActivity"/>
         <activity
             android:name=".ui.view.MainActivity"
             android:exported="true"

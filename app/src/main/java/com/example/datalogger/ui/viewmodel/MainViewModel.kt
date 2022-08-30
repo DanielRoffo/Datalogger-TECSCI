@@ -3,8 +3,10 @@ package com.example.datalogger.ui.viewmodel
 import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Context
+import android.os.Build
 import android.util.Log
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -20,6 +22,8 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import java.sql.Types.TIMESTAMP
 import java.text.SimpleDateFormat
+import java.time.ZoneId
+import java.time.format.DateTimeFormatter
 import java.util.*
 import java.util.logging.Handler
 import kotlin.concurrent.schedule
@@ -80,6 +84,7 @@ class MainViewModel() : ViewModel() {
     }
 
     //Recibe una lista de devices y busca toda su info y la va organizando en diferentes listas
+    @RequiresApi(Build.VERSION_CODES.O)
     fun getDataFromDevices() {
 
         //activa el loading screen antes de arrancar a buscar los datos
@@ -117,10 +122,10 @@ class MainViewModel() : ViewModel() {
                                         "temp1" -> {
                                             deviceData?.temp = it.value.toString()
                                         }
-                                        "time" -> {
-                                            val timestamp =
-                                                it.value as com.google.firebase.Timestamp
-                                            val date = timestamp.toDate()
+                                        "timestamp" -> {
+                                            val formatter  = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
+                                            val timestamp = it.value.toString()
+                                            val date = formatter.parse(timestamp)
                                             deviceData?.time = date
                                         }
                                     }
