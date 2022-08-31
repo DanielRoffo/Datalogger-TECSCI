@@ -57,6 +57,11 @@ class SignInActivity : AppCompatActivity() {
 
             }
         }
+
+        binding.recoveryAccountTextView.setOnClickListener {
+            val intent = Intent(this, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun onStart() {

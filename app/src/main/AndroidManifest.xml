@@ -10,9 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DataLogger">
         <activity
+            android:name=".ui.view.ForgotPasswordActivity"
+            android:exported="true"
+            android:parentActivityName=".ui.view.SignInActivity"/>
+        <activity
             android:name=".ui.view.AddDeviceActivity"
             android:exported="true"
-            android:parentActivityName=".ui.view.MainActivity"/>
+            android:parentActivityName=".ui.view.MainActivity" />
         <activity
             android:name=".ui.view.IndividualSensorDataDisplayActivity"
             android:exported="true"
@@ -20,7 +24,7 @@
         <activity
             android:name=".ui.view.SignUpActivity"
             android:exported="true"
-            android:parentActivityName=".ui.view.SignInActivity"/>
+            android:parentActivityName=".ui.view.SignInActivity" />
         <activity
             android:name=".ui.view.MainActivity"
             android:exported="true"

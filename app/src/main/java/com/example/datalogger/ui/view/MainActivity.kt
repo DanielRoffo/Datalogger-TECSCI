@@ -1,5 +1,6 @@
 package com.example.datalogger.ui.view
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import android.os.Build
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var binding: ActivityMainBinding
     lateinit var toggle: ActionBarDrawerToggle
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
