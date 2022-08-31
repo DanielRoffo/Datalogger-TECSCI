@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+
 import android.view.View
 import android.widget.Toast
 import com.example.datalogger.R
@@ -20,7 +21,10 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_sign_in)
+        binding = ActivitySignInBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Cambiar el color del SupportActionBar
         supportActionBar!!.setBackgroundDrawable(ColorDrawable(resources.getColor(R.color.light_black)))
@@ -28,8 +32,7 @@ class SignInActivity : AppCompatActivity() {
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-        binding = ActivitySignInBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+
 
         firebaseAuth = FirebaseAuth.getInstance()
         binding.signUpTextView.setOnClickListener {
