@@ -125,8 +125,9 @@ class MainViewModel() : ViewModel() {
                                         "timestamp" -> {
                                             val formatter  = SimpleDateFormat("dd/MM/yyyy HH:mm:ss")
                                             val timestamp = it.value.toString()
-                                            val date = formatter.parse(timestamp)
 
+                                            val date = formatter.parse(timestamp)
+                                            Log.d(TAG, "caca = ${date.time}")
                                             deviceData?.time = date
                                         }
                                     }
